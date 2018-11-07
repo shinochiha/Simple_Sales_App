@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Sale;
 use Illuminate\Http\Request;
 use App\Http\Requests\SaleRequest;
+use App\Product;
+use App\Customer;
+
 
 class SaleController extends Controller
 {
@@ -18,9 +21,27 @@ class SaleController extends Controller
     // memasukkan data
     public function store(SaleRequest $request)
     {
+        $response = [];
+
+        $product = Product::where('product_id',$request->product_id)->first();
+        $customer = Customer::where('cust_id', $request->cust_id)->first(); 
+
+
+        if (is_null($product) || is_null($customer)) {
+            if (is_null($product)) {
+                $response['product'] =  'Product_id yang anda masukkan tidak terdaftar';
+            }
+            if (is_null($customer)) {
+                $response['customer'] = 'Cust_id yang anda masukkan tidak terdaftar';
+            }
+            return response()->json(['msg' => $response],406);
+        }
+
+        
+
 
         $sale = Sale::create([
-            'date' => $request->date,
+            'date' => date('d-m-Y H:i:s'),
             'cust_id' => $request->cust_id,
             'product_id' => $request->product_id,
             'qty' => $request->qty,
@@ -43,7 +64,7 @@ class SaleController extends Controller
     }
 
     // mengubah isi data
-    public function update(SaleRequest $request, Sale $sale)
+    public function update(CustomerRequest $request, Sale $sale)
     {
         $sale->date = $request->date;
         $sale->cust_id = $request->cust_id;

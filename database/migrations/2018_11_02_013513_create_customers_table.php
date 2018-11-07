@@ -19,7 +19,6 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->string('phone',15);
             $table->string('email');
-            $table->timestamps();
             
         });
     }
