@@ -29,6 +29,13 @@
             </tr>
 
             <tr>
+                <td>Categories</td>
+                <td><a class="wn" href="https://simplesalesapp.herokuapp.com/api/v1/categories" target="_blank">https://simplesalesapp.herokuapp.com/api/v1/categories</a></td> 
+                <td>GET, POST, PATCH/PUT, DELETE</td>
+                
+            </tr> 
+
+            <tr>
                 <td>Products</td>
                 <td><a class="wn" href="https://simplesalesapp.herokuapp.com/api/v1/products" target="_blank">https://simplesalesapp.herokuapp.com/api/v1/products</a></td>
                 <td>GET, POST, PATCH/PUT, DELETE</td>
@@ -42,12 +49,6 @@
 
             </tr> 
 
-            <tr>
-                <td>Categories</td>
-                <td><a class="wn" href="https://simplesalesapp.herokuapp.com/api/v1/categories" target="_blank">https://simplesalesapp.herokuapp.com/api/v1/categories</a></td> 
-                <td>GET, POST, PATCH/PUT, DELETE</td>
-                
-            </tr> 
 
         </table>
 
