@@ -41,10 +41,11 @@ class CustomerController extends Controller
 
     public function update(CustomerRequest $request, Customer $customer)
     {
-        $customer->name=$request->name;
-        $customer->phone=$request->phone;
-        $customer->email=$request->email;
-        $customer->save();
+        $customer = ([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email
+        ]);
 
         $response = [
             'msg' => 'Update Success',

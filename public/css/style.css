@@ -1,14 +1,14 @@
 #stl {
 	background-color: blue;
 	color: white;
-	padding: 1%;
-	margin-bottom: 4%;
+	padding: 15px;
+	margin-bottom: 60px;
 	font-weight: bold;
 }
 
 #stl2 {
 	color:white;
-	padding:1%;
+	padding:20px;
 	margin-left:43%;
 	margin-right:43%;
 }
@@ -22,8 +22,8 @@
 .stl4 {
 	background-color:gray;
 	color:white;
-	padding:1%;
-	margin-top:10%;
+	padding:10px;
+	margin-top:100px;
 }
 
 .wn:hover {
