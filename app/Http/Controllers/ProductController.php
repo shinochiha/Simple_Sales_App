@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 
@@ -19,7 +20,17 @@ class ProductController extends Controller
     // menambah data
     public function store(ProductRequest $request)
     {
+        $response1 = [
+            'msg' => 'Category_id yang anda masukkan tidak terdaftar'
+        ];
 
+        $category = Category::where('category_id',$request->category_id)->first();
+
+        if (is_null($category)) {
+
+            return response()->json($response1, 406);
+
+        }
 
         $product = Product::create([
             'name' => $request->name,
@@ -45,10 +56,23 @@ class ProductController extends Controller
     // untuk mengupdate data / mengubah data 
     public function update(ProductRequest $request, Product $product)
     {
-        $product->name=$request->name;
-        $product->category_id=$request->category_id;
-        $product->price=$request->price;
-        $product->save();
+        $response1 = [
+            'msg' => 'Category_id yang anda masukkan tidak terdaftar'
+        ];
+
+        $category = Category::where('category_id',$request->category_id)->first();
+
+        if (is_null($category)) {
+
+            return response()->json($response1, 406);
+
+        }
+
+        $product = ([
+            'name' => $request->name,
+            'category_id' => $request->category_id,
+            'price' => $request->price
+        ]);
 
         $response = [
             'msg' => 'Update data Success',

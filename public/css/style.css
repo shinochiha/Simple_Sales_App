@@ -1,0 +1,32 @@
+#stl {
+	background-color: blue;
+	color: white;
+	padding: 1%;
+	margin-bottom: 4%;
+	font-weight: bold;
+}
+
+#stl2 {
+	color:white;
+	padding:1%;
+	margin-left:43%;
+	margin-right:43%;
+}
+
+
+.stl3 {
+	background-color: red;
+	color: white;
+}
+
+.stl4 {
+	background-color:gray;
+	color:white;
+	padding:1%;
+	margin-top:10%;
+}
+
+.wn:hover {
+	color: purple;
+	text-decoration: none;
+}

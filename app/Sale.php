@@ -23,4 +23,14 @@ class Sale extends Model
     {
     	return 'sales_id';
     }
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Customer', 'cust_id');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo('App\Product', 'product_id');
+    }
 }

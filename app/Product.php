@@ -16,4 +16,14 @@ class Product extends Model
     {
     	return 'product_id';
     }
+
+    public function sale()
+    {
+        return $this->hasOne('App\Sale', 'product_id');
+    }
+
+    public function categories()
+    {
+    	return $this->belongsTo('App\Category', 'category_id');
+    }
 }

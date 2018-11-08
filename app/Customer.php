@@ -19,4 +19,9 @@ class Customer extends Model
     {
     	return 'cust_id';
     }
+
+    public function sale()
+    {
+        return $this->hasOne('App\Sale', 'cust_id');
+    }
 }

@@ -17,11 +17,21 @@ class CreateSalesTable extends Migration
             $table->increments('sales_id');
             $table->date('date');
             $table->integer('cust_id')->unsigned();
-            $table->foreign('cust_id')->references('cust_id')->on('customers')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('product_id')->on('products')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('qty');
             $table->biginteger('price');
+
+            $table->foreign('cust_id')
+                  ->references('cust_id')
+                  ->on('customers')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
+
+            $table->foreign('product_id')
+                  ->references('product_id')
+                  ->on('products')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
         });
     }
 
