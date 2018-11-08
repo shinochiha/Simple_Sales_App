@@ -9,13 +9,17 @@
     <link rel="shortcut icon" href="ico/icon.png">
 </head>
         <body>
-        <h1 align="center" id="stl" class="shadow">API - Simple Sales App</h1>
-        <h2 align="center" id="stl2" class="rounded shadow bg-dark">Backend (2)</h2>
+       <h1 align="center" id="stl" class="shadow">API - Simple Sales App</h1>
+        <center>
+            <div class="btn-group">
+                <button class="btn btn-dark shadow btn-lg">Backend (2)</button>
+            </div>
+        </center>
         <br>
         <p align="center">The master project repository is <a class="wn" href="https://github.com/shinochiha/Simple_Sales_App" target="_blank">github.com/shinochiha/Simple_Sales_App</a></p>
 
         <br>
-        <table border="2" cellpadding="15" align="center" class="shadow">
+        <table cellpadding="15" align="center" class="shadow border">
             <tr class="stl3">
                 <th>Table</th>
                 <th>Endpoint</th>
