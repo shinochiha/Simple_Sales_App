@@ -38,9 +38,8 @@ class CategoryController extends Controller
 
     public function update(CategoryRequest $request, Category $category)
     {
-         $category = ([
-            'name' => $request->name
-        ]);
+        $category->name=$request->name;
+        $category->save();
 
         $response = [
             'msg' => 'Update data Success',

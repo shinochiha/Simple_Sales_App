@@ -68,11 +68,10 @@ class ProductController extends Controller
 
         }
 
-        $product = ([
-            'name' => $request->name,
-            'category_id' => $request->category_id,
-            'price' => $request->price
-        ]);
+        $product->name=$request->name;
+        $product->category_id=$request->category_id;
+        $product->price=$request->price;
+        $product->save();
 
         $response = [
             'msg' => 'Update data Success',

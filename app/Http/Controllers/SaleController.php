@@ -79,13 +79,12 @@ class SaleController extends Controller
             return response()->json(['msg' => $response],406);
         }
 
-        $sale = ([
-            'date' => date('d-m-Y H:i:s'),
-            'cust_id' => $request->cust_id,
-            'product_id' => $request->product_id,
-            'qty' => $request->qty,
-            'price' => $request->price,
-        ]);
+        $sale->date=date('d-m-Y H:i:s');
+        $sale->cust_id=$request->cust_id;
+        $sale->product_id=$request->product_id;
+        $sale->qty=$request->qty;
+        $sale->price=$request->price;
+        $sale->save();
 
         $response = [
             'msg' => 'Update data Success',
