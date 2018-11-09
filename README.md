@@ -2,6 +2,40 @@
 
 Sales APP Restful API using Laravel API Resource (Laravel Version 5.7, PHP version 7.2).
 
+### Requirements
+- PHP >= 7.1.3
+- Composer
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- php-pgsql Extension
+- Text Editor
+- Postman Tool
+
+### Installation
+```sh
+$ git clone https://github.com/shinochiha/Simple_Sales_App.git
+$ cd Simple_Sales_App
+$ cp .env.example .env
+```
+Open your favourite text editor.
+
+Open .env file, edit with your database credentials.
+```sh
+$ composer install
+$ php artisan key:generate
+$ php artisan passport:install
+$ php artisan migrate
+$ php artisan serve
+```
+Open your browser, goto http://localhost:8000
+<br>
+Open Postman to testing API
+
 ### Features:
 
 1. Setting up the environment.
@@ -12,18 +46,6 @@ Sales APP Restful API using Laravel API Resource (Laravel Version 5.7, PHP versi
 6. Creating one-many relationship.
 7. Postman Colletion.
 
-### Setup
-
-1. Clone or download this repository to your local machine
-2. You can change .env for connect database exmple: cp .env.example .env
-3. Run following command
-
-- <code>composer install</code>
-- <code>php artisan migrate</code>
-- <code>php artisan serve</code>
-
-4. Open Postman to testing API
-
 ### Endpoint
 1. Customers : https://simplesalesapp.herokuapp.com/api/v1/customers
 2. Categories : https://simplesalesapp.herokuapp.com/api/v1/categories
@@ -31,17 +53,12 @@ Sales APP Restful API using Laravel API Resource (Laravel Version 5.7, PHP versi
 4. Sales : https://simplesalesapp.herokuapp.com/api/v1/sales
 
 
-## Requirement
-- Start Postgresql, Apache service 
-- Php laravel (Laravel Framework 5.7, PHP version 7.2) 
-- Text editor 
-- Postman tool
-
 ## Site
 URL: https://simplesalesapp.herokuapp.com/
 
-Use Postman tool for performing integration testing with your API. Postman Colletion,
-link: https://www.getpostman.com/collections/2239cdf903b1e5bc8e49
+Use Postman tool for performing integration testing with your API. Postman Colletion link: 
+<br>
+https://www.getpostman.com/collections/2239cdf903b1e5bc8e49
 
 Note: You can change environment Postman type Online URL or Local URL
 
