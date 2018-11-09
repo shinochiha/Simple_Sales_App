@@ -38,6 +38,13 @@ Open your browser, goto http://localhost:8000
 <br>
 Open Postman to testing API
 
+### Endpoint
+1. Customers    : localhost:8000/api/v1/customers
+2. Categories   : localhost:8000/api/v1/categories
+3. Products     : localhost:8000/api/v1/products
+4. Sales        : localhost:8000/api/v1/sales
+
+
 ### Features:
 
 1. Setting up the environment.
@@ -47,13 +54,6 @@ Open Postman to testing API
 5. Setup requirement in Requests
 6. Creating one-many relationship.
 7. Postman Colletion.
-
-### Endpoint
-1. Customers : https://simplesalesapp.herokuapp.com/api/v1/customers
-2. Categories : https://simplesalesapp.herokuapp.com/api/v1/categories
-3. Products : https://simplesalesapp.herokuapp.com/api/v1/products
-4. Sales : https://simplesalesapp.herokuapp.com/api/v1/sales
-
 
 ## Site
 URL: https://simplesalesapp.herokuapp.com/
