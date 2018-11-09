@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\SaleRequest;
 use App\Product;
 use App\Customer;
-
+use DB;
 
 class SaleController extends Controller
 {
@@ -15,7 +15,8 @@ class SaleController extends Controller
     // menampilkan selueruh data
     public function index()
     {
-        return Sale::all();
+        $sale = DB::table('sales')->orderBy('sales_id')->get()->all();
+        return $sale;
     }
 
     // memasukkan data

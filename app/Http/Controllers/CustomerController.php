@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Customer;
 use Illuminate\Http\Request;
 use App\Http\Requests\CustomerRequest;
+use DB;
 
 class CustomerController extends Controller
 {
 
     public function index()
     {
-        return Customer::all();
+        $customer = DB::table('customers')->orderBy('cust_id')->get()->all();
+        return $customer;
     }
 
    

@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryRequest;
+use DB;
 
 class CategoryController extends Controller
 {
     
     public function index()
     {
-        return Category::all();
+        $category = DB::table('categories')->orderBy('category_id')->get()->all();
+        return $category;
     }
 
 

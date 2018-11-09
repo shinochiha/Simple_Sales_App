@@ -6,6 +6,7 @@ use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
+use DB;
 
 class ProductController extends Controller
 {
@@ -13,7 +14,8 @@ class ProductController extends Controller
     // menampilkan seluruh isi data
     public function index()
     {
-        return Product::all();
+        $product = DB::table('products')->orderBy('product_id')->get()->all();
+        return $product;
     }
 
     
