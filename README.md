@@ -1,4 +1,7 @@
 # Laravel Simple_Sales_App Restfull Api
+<p align="center">
+<a href="https://simplesalesapp.herokuapp.com"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
 Sales APP Restful API using Laravel API Resource (Laravel Version 5.7, PHP version 7.2).
 
