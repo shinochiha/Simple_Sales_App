@@ -22,6 +22,6 @@ class Customer extends Model
 
     public function sale()
     {
-        return $this->hasOne('App\Sale', 'cust_id');
+        return $this->hasMany('App\Sale', 'cust_id');
     }
 }

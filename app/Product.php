@@ -19,7 +19,7 @@ class Product extends Model
 
     public function sale()
     {
-        return $this->hasOne('App\Sale', 'product_id');
+        return $this->hasMany('App\Sale', 'product_id');
     }
 
     public function categories()
